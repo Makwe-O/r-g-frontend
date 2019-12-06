@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Title from '../../molecules/Title/Title';
 import Card2 from '../../molecules/Card2/Card2';
 import Button from '../../atoms/Button/Button';
@@ -20,6 +21,10 @@ const SectionCard2 = ({ title }) => {
       </div>
     </div>
   );
+};
+
+SectionCard2.propTypes = {
+  title: PropTypes.string.isRequired
 };
 
 export default SectionCard2;

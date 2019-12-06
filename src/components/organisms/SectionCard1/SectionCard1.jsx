@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Title from '../../molecules/Title/Title';
 import Card from '../../molecules/Card/Card';
 import Button from '../../atoms/Button/Button';
@@ -22,6 +23,10 @@ const PopularSection = ({ title }) => {
       </div>
     </div>
   );
+};
+
+PopularSection.propTypes = {
+  title: PropTypes.string.isRequired
 };
 
 export default PopularSection;
