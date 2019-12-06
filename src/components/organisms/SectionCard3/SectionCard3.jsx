@@ -17,9 +17,6 @@ const SectionCard3 = ({ title }) => {
         <Card3 />
         <Card3 />
       </div>
-      <div className="section3__button">
-        <Button theme="button--primary">View More</Button>
-      </div>
     </div>
   );
 };

@@ -18,9 +18,6 @@ const PopularSection = ({ title }) => {
         <Card />
         <Card />
       </div>
-      <div className="section__button">
-        <Button theme="button--primary">View More</Button>
-      </div>
     </div>
   );
 };
