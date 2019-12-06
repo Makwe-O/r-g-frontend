@@ -1,0 +1,59 @@
+$breakpoint-desktop: 1200px;
+$breakpoint-bigTablet: 990px;
+$breakpoint-tablet: 768px;
+$breakpoint-smallTablet: 576px;
+.starwars {
+  min-height: 60vh;
+  background: url(https://res.cloudinary.com/dnavbc7ny/image/upload/v1570648427/star%20wars/hero-banner.jpg);
+  background-size: contain;
+  color: #eeeeee;
+
+  &__logo__container {
+    padding: 20px 10px;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    text-align: center;
+  }
+  &__header__intro {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  &__form {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  @media only screen and(min-width: 576px) {
+    &__container {
+      max-width: 540px;
+    }
+    &__header__intro {
+      flex-direction: row;
+      justify-content: center;
+    }
+    &__header__text {
+      margin-left: 15px;
+    }
+  }
+  @media only screen and(min-width: 768px) {
+    &__container {
+      max-width: 760px;
+    }
+  }
+  @media only screen and (min-width: $breakpoint-bigTablet) {
+    &__container {
+      max-width: 960px;
+    }
+  }
+  @media only screen and(min-width: $breakpoint-desktop) {
+    &__container {
+      max-width: 1140px;
+    }
+  }
+}

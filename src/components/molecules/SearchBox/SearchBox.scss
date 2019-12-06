@@ -1,0 +1,27 @@
+$breakpoint-desktop: 1200px;
+$breakpoint-bigTablet: 990px;
+$breakpoint-tablet: 768px;
+$breakpoint-smallTablet: 576px;
+.form__wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 250px;
+  width: 100%;
+
+  @media only screen and(min-width: $breakpoint-smallTablet) {
+    & {
+      max-width: 500px;
+    }
+  }
+  @media only screen and(min-width: $breakpoint-tablet) {
+    & {
+      max-width: 600px;
+    }
+  }
+}
+.form__icon {
+  position: absolute;
+  top: 30%;
+  z-index: 2;
+  left: 4px;
+}

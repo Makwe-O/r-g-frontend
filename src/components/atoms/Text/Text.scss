@@ -1,0 +1,45 @@
+$breakpoint-desktop: 1200px;
+$breakpoint-bigTablet: 990px;
+$breakpoint-tablet: 768px;
+$breakpoint-smallTablet: 576px;
+.white {
+  color: #fff;
+}
+.text--large {
+  font-weight: bold;
+  font-size: 30px;
+  @media only screen and(min-width: $breakpoint-smallTablet) {
+    & {
+      font-size: 40px;
+    }
+  }
+}
+
+.text--medium {
+  font-weight: bold;
+  font-size: 20px;
+  @media only screen and(min-width: $breakpoint-smallTablet) {
+    & {
+      font-size: 24px;
+    }
+  }
+}
+.text--normal {
+  font-weight: bold;
+  font-size: 16px;
+  @media only screen and(min-width: $breakpoint-smallTablet) {
+    & {
+      font-size: 18px;
+    }
+  }
+}
+
+.text--small {
+  font-weight: 300;
+  font-size: 14px;
+  @media only screen and(min-width: $breakpoint-smallTablet) {
+    & {
+      font-size: 16px;
+    }
+  }
+}
