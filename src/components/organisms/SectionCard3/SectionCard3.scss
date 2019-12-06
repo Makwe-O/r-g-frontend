@@ -1,0 +1,24 @@
+$breakpoint-smallTablet: 576px;
+.section3__grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+
+  @media only screen and(min-width: $breakpoint-smallTablet) {
+    & {
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+  }
+}
+
+.section3__title {
+  text-align: center;
+}
+.section3__button {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}

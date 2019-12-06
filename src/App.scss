@@ -1,0 +1,30 @@
+$breakpoint-desktop: 1200px;
+$breakpoint-bigTablet: 990px;
+$breakpoint-tablet: 768px;
+$breakpoint-smallTablet: 576px;
+.starwars__container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+
+  @media only screen and(min-width: 576px) {
+    & {
+      max-width: 540px;
+    }
+  }
+  @media only screen and(min-width: 768px) {
+    & {
+      max-width: 760px;
+    }
+  }
+  @media only screen and (min-width: $breakpoint-bigTablet) {
+    & {
+      max-width: 960px;
+    }
+  }
+  @media only screen and(min-width: $breakpoint-desktop) {
+    & {
+      max-width: 1140px;
+    }
+  }
+}
