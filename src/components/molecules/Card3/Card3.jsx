@@ -1,28 +1,37 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Text from '../../atoms/Text/Text';
 import './Card3.scss';
 
-const Card3 = () => {
+const Card3 = ({ text, gender, birth }) => {
   return (
     <div className="card3__container">
       <div className="card__image__container">
         <img
           className="card3__image"
-          src="https://res.cloudinary.com/store-manager/image/upload/v1571213132/barefoot-nomad/destination-image-one.svg"
+          src="https://res.cloudinary.com/dnavbc7ny/image/upload/v1570656730/star%20wars/character-1.jpg"
           alt="card"
         />
       </div>
       <div className="card3__content">
         <div className="card3__content__title">
-          <Text text="Ghost" color="grey" type="text--normal" />
+          <Text text={text} color="grey" type="text--normal" />
         </div>
         <div className="card3__content__body">
-          <Text text="Model" type="text--small" />
-          <Text text="Cargo" type="text--small" />
+          Birth Year
+          <Text text={birth} type="text--small" />
+          Gender
+          <Text text={gender} type="text--small" />
         </div>
       </div>
     </div>
   );
+};
+
+Card3.propTypes = {
+  text: PropTypes.string.isRequired,
+  gender: PropTypes.string.isRequired,
+  birth: PropTypes.string.isRequired
 };
 
 export default Card3;
