@@ -12,7 +12,6 @@ import { StarwarsContext } from '../../context';
 
 const Home = () => {
   const { store } = useContext(StarwarsContext);
-
   return (
     <>
       <Header />
@@ -54,7 +53,9 @@ const Home = () => {
               data={store.people.results.filter((starship, index) => index < 4)}
             />
             <div className="section2__button">
-              <Button theme="button--primary">View More</Button>
+              <Link to="/people">
+                <Button theme="button--primary">View More</Button>
+              </Link>
             </div>
           </div>
         </>
