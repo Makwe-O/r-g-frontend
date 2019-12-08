@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Text from '../../atoms/Text/Text';
 import './Card3.scss';
 
-const Card3 = ({ text, gender, birth }) => {
+const Card3 = ({ text, gender, birth, url }) => {
+  const link = url.split('/');
   return (
     <div className="card3__container">
       <div className="card__image__container">
@@ -22,6 +24,7 @@ const Card3 = ({ text, gender, birth }) => {
           <Text text={birth} type="text--small" />
           Gender
           <Text text={gender} type="text--small" />
+          <Link to={`${link[4]}/${link[5]}`}>Click</Link>
         </div>
       </div>
     </div>
@@ -31,7 +34,8 @@ const Card3 = ({ text, gender, birth }) => {
 Card3.propTypes = {
   text: PropTypes.string.isRequired,
   gender: PropTypes.string.isRequired,
-  birth: PropTypes.string.isRequired
+  birth: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 };
 
 export default Card3;

@@ -14,6 +14,7 @@ const SectionCard3 = ({ title, data }) => {
         {data.map(people => (
           <Card3
             key={people.name}
+            url={people.url}
             text={people.name}
             birth={people.birth_year}
             gender={people.gender}

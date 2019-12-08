@@ -13,7 +13,7 @@ const SectionCard2 = ({ title, data }) => {
       </div>
       <div className="section2__grid">
         {data.map(planet => (
-          <Card2 text={planet.name} key={planet.name} />
+          <Card2 text={planet.name} key={planet.name} url={planet.url} />
         ))}
       </div>
     </div>
