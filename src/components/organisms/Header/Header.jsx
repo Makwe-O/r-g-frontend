@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Logo from '../../atoms/Logo/Logo';
 import Text from '../../atoms/Text/Text';
 import SearchBox from '../../molecules/SearchBox/SearchBox';
+
 import './Header.scss';
 
-const Header = () => {
+import { searchResultContext } from '../../../context/searchContext';
+
+const Header = ({ history }) => {
+  const { searchStore } = useContext(searchResultContext);
+
   return (
     <div className="starwars">
       <div className="starwars__container">
@@ -24,7 +29,7 @@ const Header = () => {
             type="text--medium"
           />
           <div className="starwars__form">
-            <SearchBox />
+            <SearchBox search={searchStore.query} history={history} />
           </div>
         </div>
       </div>
