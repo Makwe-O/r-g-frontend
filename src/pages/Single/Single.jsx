@@ -7,7 +7,7 @@ import Text from '../../components/atoms/Text/Text';
 import SingleHeader from '../../components/organisms/SingleHeader/SingleHeader';
 import Related from '../../components/organisms/Related/Related';
 
-import { StarwarsContext } from '../../context';
+import { StarwarsContext } from '../../context/starWarsDataContext';
 
 const Single = ({ match }) => {
   const { store } = useContext(StarwarsContext);

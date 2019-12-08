@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SectionCard1 from '../../components/organisms/SectionCard1/SectionCard1';
 import Header from '../../components/organisms/Header/Header';
 
-import { StarwarsContext } from '../../context';
+import { StarwarsContext } from '../../context/starWarsDataContext';
 
 const Category = ({ match }) => {
   const { store } = useContext(StarwarsContext);

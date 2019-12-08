@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { GridLoader } from 'react-spinners';
 
 import Button from '../../components/atoms/Button/Button';
@@ -8,13 +9,13 @@ import SectionCard1 from '../../components/organisms/SectionCard1/SectionCard1';
 import SectionCard2 from '../../components/organisms/SectionCard2/SectionCard2';
 import SectionCard3 from '../../components/organisms/SectionCard3/SectionCard3';
 
-import { StarwarsContext } from '../../context';
+import { StarwarsContext } from '../../context/starWarsDataContext';
 
-const Home = () => {
+const Home = ({ history }) => {
   const { store } = useContext(StarwarsContext);
   return (
     <>
-      <Header />
+      <Header history={history} />
       {store.planets.results === undefined ? (
         <div className="loader">
           <GridLoader size={50} color="#e3e3e3" />
@@ -64,4 +65,7 @@ const Home = () => {
   );
 };
 
+Home.propTypes = {
+  history: PropTypes.object.isRequired
+};
 export default Home;
