@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SingleHeader.scss';
 
 import Logo from '../../atoms/Logo/Logo';
 import Text from '../../atoms/Text/Text';
 
-const SingleHeader = () => {
+const SingleHeader = ({ text }) => {
   return (
     <div className="starwars">
       <div className="starwars__container">
@@ -12,11 +13,14 @@ const SingleHeader = () => {
           <Logo />
         </div>
         <div className="starwars__single__title">
-          <Text text="Corellian Scout" type="text--large" />
+          <Text text={text} type="text--large" />
         </div>
       </div>
     </div>
   );
 };
 
+SingleHeader.propTypes = {
+  text: PropTypes.string.isRequired
+};
 export default SingleHeader;

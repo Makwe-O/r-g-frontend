@@ -22,6 +22,7 @@ const PopularSection = ({ title, data }) => {
             {data.map(starship => (
               <Card
                 key={starship.name}
+                url={starship.url}
                 text={starship.name}
                 model={starship.model}
                 cargo={starship.cargo_capacity}
