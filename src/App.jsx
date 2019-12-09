@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import Category from './pages/Category/Category';
 import Single from './pages/Single/Single';
 import Search from './pages/Search/Search';
+import Footer from './components/molecules/Footer/Footer';
 import {
   initialState,
   starwarsReducer,
@@ -57,6 +58,7 @@ function App() {
           <Route exact path="/:category" component={Category} />
           <Route exact path="/:category/:categoryid" component={Single} />
         </Switch>
+        <Footer />
       </StarwarsContext.Provider>
     </searchResultContext.Provider>
   );

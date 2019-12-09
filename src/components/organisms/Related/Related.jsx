@@ -31,6 +31,7 @@ const Related = ({ text, data }) => {
                   population={starship.population}
                   birthYear={starship.birth_year}
                   gender={starship.gender}
+                  related
                 />
               ))}
           </div>

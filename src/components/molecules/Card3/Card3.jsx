@@ -24,7 +24,7 @@ const Card3 = ({ text, gender, birth, url }) => {
           <Text text={birth} type="text--small" />
           Gender
           <Text text={gender} type="text--small" />
-          <Link to={`${link[4]}/${link[5]}`}>Click</Link>
+          <Link to={`${link[4]}/${link[5]}`}>Read More</Link>
         </div>
       </div>
     </div>
