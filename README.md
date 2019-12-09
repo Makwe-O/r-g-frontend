@@ -7,6 +7,7 @@ Frontend View of the starwars backend API service (https://swapi.co/)
 - Reactjs
 - React Router for Routing
 - React Context for state management
+- Cypress for integration tests
 
 ### Setting Up Repo
  - Clone this repo using https://github.com/Makwe-O/r-g-frontend.git
