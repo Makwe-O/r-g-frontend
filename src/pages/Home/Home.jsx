@@ -8,7 +8,6 @@ import Header from '../../components/organisms/Header/Header';
 import SectionCard1 from '../../components/organisms/SectionCard1/SectionCard1';
 import SectionCard2 from '../../components/organisms/SectionCard2/SectionCard2';
 import SectionCard3 from '../../components/organisms/SectionCard3/SectionCard3';
-
 import { StarwarsContext } from '../../context/starWarsDataContext';
 
 const Home = ({ history }) => {
