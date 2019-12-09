@@ -15,7 +15,7 @@ const Card3 = ({ text, gender, birth, url }) => {
           alt="card"
         />
       </div>
-      <div className="card3__content">
+      <div className="card__content">
         <div className="card3__content__title">
           <Text text={text} color="grey" type="text--normal" />
         </div>

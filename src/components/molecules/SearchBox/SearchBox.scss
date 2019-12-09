@@ -20,8 +20,12 @@ $breakpoint-smallTablet: 576px;
   }
 }
 .form__icon {
+  display: none;
   position: absolute;
   top: 30%;
   z-index: 2;
   left: 4px;
+  @media only screen and(min-width: $breakpoint-tablet) {
+    display: block;
+  }
 }
