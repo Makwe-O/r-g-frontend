@@ -20,7 +20,6 @@ const SearchBox = ({ search, history }) => {
     } else {
       return null;
     }
-    // !window.location.pathname.includes('search') && history.push('/search');
   };
   return (
     <span className="form__wrapper">
