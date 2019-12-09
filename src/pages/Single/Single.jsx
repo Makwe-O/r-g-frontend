@@ -195,7 +195,12 @@ const Single = ({ match }) => {
       </div>
 
       <div className="starwars__container">
-        <Related text={category} data={store[`${category}`]} />
+        <Related
+          text={category}
+          data={store[`${category}`]}
+          match={match}
+          
+        />
       </div>
     </>
   );

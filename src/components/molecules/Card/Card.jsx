@@ -13,10 +13,11 @@ const Card = ({
   population,
   birthYear,
   gender,
-  url = ''
+  url = '',
+  related = false
 }) => {
   const link = url.split('/');
-
+  console.log(url, 'do');
   return (
     <div className="card__container">
       <div>
@@ -68,7 +69,11 @@ const Card = ({
                 <Text text={gender} type="text--small" />
               </>
             ) : null}
-            <Link to={`${link[4]}/${link[5]}`}>Click</Link>
+            {!related ? (
+              <Link to={`${link[4]}/${link[5]}`}>Read More</Link>
+            ) : (
+              <Link to={`${link[5]}`}>Read More</Link>
+            )}
           </>
         </div>
       </div>
@@ -84,7 +89,8 @@ Card.propTypes = {
   climate: PropTypes.string,
   birthYear: PropTypes.string,
   gender: PropTypes.string,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
+  related: PropTypes.bool
 };
 Card.defaultProps = {
   model: null,
@@ -92,6 +98,7 @@ Card.defaultProps = {
   population: null,
   climate: null,
   birthYear: null,
-  gender: null
+  gender: null,
+  related: false
 };
 export default Card;
