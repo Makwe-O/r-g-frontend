@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import PropTypes from 'prop-types';
@@ -7,7 +7,7 @@ import Header from '../../components/organisms/Header/Header';
 
 import {
   StarwarsContext,
-  UPDATE_STARWARS_DATA
+  UPDATE_STARWARS_DATA,
 } from '../../context/starWarsDataContext';
 
 const Category = ({ match, history }) => {
@@ -15,17 +15,22 @@ const Category = ({ match, history }) => {
 
   const { category } = match.params;
 
-  const handlePageClick = data => {
+  const handlePageClick = (data) => {
     let selected = data.selected;
     try {
       const res = axios
         .get(`https://swapi.co/api/${category}/?page=${selected + 1}`)
-        .then(content => {
+        .then((content) => {
           const paginatedData = { [category]: content.data };
           dispatch({ type: UPDATE_STARWARS_DATA, payload: paginatedData });
         });
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <>
@@ -56,7 +61,7 @@ const Category = ({ match, history }) => {
 
 Category.propTypes = {
   match: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired
+  history: PropTypes.object.isRequired,
 };
 
 export default Category;

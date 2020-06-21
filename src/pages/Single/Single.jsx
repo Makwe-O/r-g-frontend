@@ -16,6 +16,7 @@ const Single = ({ match }) => {
   const [starwarData, setStarwarData] = useState({});
 
   useEffect(async () => {
+    window.scrollTo(0, 0);
     try {
       const res = await makeRequest(`${category}/${categoryid}`);
       await setStarwarData({ ...starwarData, ...res });
