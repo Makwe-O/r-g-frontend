@@ -195,17 +195,12 @@ const Single = ({ match }) => {
       </div>
 
       <div className="starwars__container">
-        <Related
-          text={category}
-          data={store[`${category}`]}
-          match={match}
-          
-        />
+        <Related text={category} data={store[`${category}`]} match={match} />
       </div>
     </>
   );
 };
 Single.propTypes = {
-  match: PropTypes.object.isRequired
+  match: PropTypes.object.isRequired,
 };
 export default Single;

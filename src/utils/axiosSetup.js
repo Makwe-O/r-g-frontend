@@ -1,15 +1,15 @@
 import axios from 'axios';
 
 export const apiInstance = axios.create({
-  baseURL: 'https://swapi.co/api/'
+  baseURL: 'https://swapi.dev/api/',
 });
 
 const makeRequest = (url, searchTerm, options = { method: 'GET' }) => {
   return apiInstance({
     url,
     method: options.method,
-    params: { search: searchTerm }
-  }).then(response => response.data);
+    params: { search: searchTerm },
+  }).then((response) => response.data);
 };
 
 export default makeRequest;
